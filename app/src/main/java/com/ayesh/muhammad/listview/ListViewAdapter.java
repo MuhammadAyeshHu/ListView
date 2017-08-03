@@ -8,43 +8,36 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.Toast;
+import android.widget.TextView;
+
+import java.util.ArrayList;
 
 /**
- * Created by mayesh on 8/3/17.
+ * Created by muhammad on 03/08/17.
  */
 
-public class ListViewAdapter extends ArrayAdapter {
-    Context context;
-    int resource;
+public class ListViewAdapter extends ArrayAdapter<Data> {
+    private int resource;
+    private ArrayList<Data> data;
 
-    public ListViewAdapter(@NonNull Context context, @LayoutRes int resource) {
-        super(context, resource);
-        this.context = context;
+    public ListViewAdapter(@NonNull Context context, @LayoutRes int resource, @NonNull ArrayList<Data> data) {
+        super(context, resource, data);
         this.resource = resource;
-    }
-
-    @Nullable
-    @Override
-    public Object getItem(int position) {
-        return super.getItem(position);
+        this.data = data;
     }
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         convertView = inflate(parent);
-        Toast.makeText(context, "I am here", Toast.LENGTH_SHORT).show();
 
-        RowLogic.getInstance().setView(convertView);
-        RowLogic.getInstance().setRowNumber(position);
+        RowLogic rowLogic = new RowLogic(convertView);
+        rowLogic.setRowNumber(position);
+
         return convertView;
     }
 
-
     private View inflate(@NonNull ViewGroup parent) {
-        LayoutInflater inflater = LayoutInflater.from(context);
-        return inflater.inflate(resource, parent, false);
+        return LayoutInflater.from(getContext()).inflate(resource, parent, false);
     }
 }
-
