@@ -12,7 +12,7 @@ import java.util.Objects;
  */
 
 public class RowLogic {
-    private static ArrayList<Data> data;
+    private static ArrayList<Object> data;
     private View view;
 
     public RowLogic(View view) {
@@ -26,20 +26,18 @@ public class RowLogic {
     private void makeLogic(int rowNumber) {
         try {
             TextView myText = view.findViewById(R.id.my_text);
-            myText.setText(data.get(rowNumber).text);
+            myText.setText(((Data) data.get(rowNumber)).text);
         } catch (NullPointerException e) {
             Toast.makeText(view.getContext(), "Data didn't set", Toast.LENGTH_SHORT).show();
         }
     }
 
-    public static void setData(ArrayList<Data> data) {
+    public static void setData(ArrayList<Object> data) {
         RowLogic.data = data;
     }
 
-
-    private class RowLogicExceptions extends Exception {
-
-
+    public static ArrayList<Object> getData() {
+        return data;
     }
 }
 

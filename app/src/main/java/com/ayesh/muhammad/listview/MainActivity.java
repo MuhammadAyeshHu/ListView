@@ -8,7 +8,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    private ArrayList<Data> data = new ArrayList<>();
+    private ArrayList<Object> data = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,11 +17,11 @@ public class MainActivity extends AppCompatActivity {
         data.add(new Data("1"));
         data.add(new Data("2"));
         data.add(new Data("3"));
-//        RowLogic.setData(data);
+        RowLogic.setData(data);
 
         ListView listView = (ListView) findViewById(R.id.list_view);
 
-        ListViewAdapter adapter = new ListViewAdapter(this,R.layout.list_row,data);
+        ListViewAdapter adapter = new ListViewAdapter(this,R.layout.list_row);
 
         listView.setAdapter(adapter);
 

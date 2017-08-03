@@ -8,22 +8,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.TextView;
-
-import java.util.ArrayList;
 
 /**
  * Created by muhammad on 03/08/17.
  */
 
-public class ListViewAdapter extends ArrayAdapter<Data> {
+public class ListViewAdapter extends ArrayAdapter{
     private int resource;
-    private ArrayList<Data> data;
 
-    public ListViewAdapter(@NonNull Context context, @LayoutRes int resource, @NonNull ArrayList<Data> data) {
-        super(context, resource, data);
+    public ListViewAdapter(@NonNull Context context, @LayoutRes int resource) {
+        super(context, resource, RowLogic.getData());
         this.resource = resource;
-        this.data = data;
     }
 
     @NonNull
