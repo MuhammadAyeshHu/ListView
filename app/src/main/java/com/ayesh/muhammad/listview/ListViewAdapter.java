@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Toast;
 
 /**
  * Created by mayesh on 8/3/17.
@@ -33,6 +34,8 @@ public class ListViewAdapter extends ArrayAdapter {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         convertView = inflate(parent);
+        Toast.makeText(context, "I am here", Toast.LENGTH_SHORT).show();
+
         RowLogic.getInstance().setView(convertView);
         RowLogic.getInstance().setRowNumber(position);
         return convertView;

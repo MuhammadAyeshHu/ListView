@@ -2,6 +2,7 @@ package com.ayesh.muhammad.listview;
 
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Created by mayesh on 8/3/17.
@@ -21,6 +22,7 @@ public class RowLogic {
 
     public void setRowNumber(int rowNumber) {
         makeLogic(rowNumber);
+        Toast.makeText(view.getContext(), test[rowNumber], Toast.LENGTH_SHORT).show();
     }
 
     private void makeLogic(int rowNumber) {
