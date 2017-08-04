@@ -1,4 +1,4 @@
-package com.ayesh.muhammad.listview;
+package com.ayesh.muhammad.listview.ListView;
 
 import android.content.Context;
 import android.support.annotation.LayoutRes;
