@@ -9,6 +9,7 @@ import android.widget.ListView;
  * <li>This class depends on:</li>
  * <ul>
  *     <li>{@link ListViewAdapter}: The adapter of the ListView.
+ *
  * </ul>
  */
 
