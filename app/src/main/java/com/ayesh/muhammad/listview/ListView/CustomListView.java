@@ -31,7 +31,7 @@ public class CustomListView {
      * @param sampleListView Layout Reference of the customized layout that represents the row, (ex:R.layout.rowLayoutXmlFileName)
      */
     public CustomListView(Activity activity, @IdRes int listView, @LayoutRes int sampleListView) {
-        RowLogic.invokeData();
+        DataHolder.invokeData();
         this.listViewTagId = listView;
         this.listViewLayout = sampleListView;
         this.context = activity;
