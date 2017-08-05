@@ -9,7 +9,6 @@ import android.widget.ListView;
  * <li>This class depends on:</li>
  * <ul>
  *     <li>{@link ListViewAdapter}: The adapter of the ListView.
- *     <li>{@link RowLogic}: put your data and make your logic there.
  * </ul>
  */
 

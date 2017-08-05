@@ -23,33 +23,6 @@ public class DataHolder {
         data.add(new Data("1"));
         data.add(new Data("2"));
         data.add(new Data("3"));
-        data.add(new Data("1"));
-        data.add(new Data("2"));
-        data.add(new Data("3"));
-        data.add(new Data("1"));
-        data.add(new Data("2"));
-        data.add(new Data("3"));
-        data.add(new Data("1"));
-        data.add(new Data("2"));
-        data.add(new Data("3"));
-        data.add(new Data("1"));
-        data.add(new Data("2"));
-        data.add(new Data("3"));
-        data.add(new Data("1"));
-        data.add(new Data("2"));
-        data.add(new Data("3"));
-        data.add(new Data("1"));
-        data.add(new Data("2"));
-        data.add(new Data("3"));
-        data.add(new Data("1"));
-        data.add(new Data("2"));
-        data.add(new Data("3"));
-        data.add(new Data("1"));
-        data.add(new Data("2"));
-        data.add(new Data("3"));
-        data.add(new Data("1"));
-        data.add(new Data("2"));
-        data.add(new Data("3"));
     }
 
     /**
